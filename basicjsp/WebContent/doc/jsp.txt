@@ -1,0 +1,57 @@
+** JSP (Java Server Page)
+1. project structure (이클립스 기준)
+src- package - *.java
+webcontent -folder -html,css,js -jsp
+			-META-INF -WEB-INF lib>>*.jar web.xml
+
+2. 배포파일(*.war) project.war -foler -html,css,js -jsp
+			-META-INF -WEB-INF lib>>*.jar web.xml	-Classes >> package >> *.class
+
+3. jsp	-servlet(html in java) -jsp(java in html)
+
+**jsp >> servlet으로 변환.
+public class servletname extends xxx {
+	변수, 메서드 선언		<< jsp 선언부가 여기로
+	public void service(req, res){	<< jsp 처리부
+		Logic처리	
+		out.println("html");  << jsp 출력부
+	}
+}
+
+형식 <% ... %>
+a. 선언부 <%! java %>
+<%!
+	int x;
+	String name="윤상동";
+	public void plus(){
+	}
+%>
+b. 처리부<% java %>
+<%
+	x=30;
+	int z=x+20;
+	DB Logic(JDBC)
+%>
+c. 출력부<%= java %>
+<%= name %>   여기서는 세미콜론 안찍어~ 주의~
+
+compile 기반 >> servlet
+script 기반 >> asp, php, jsp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
